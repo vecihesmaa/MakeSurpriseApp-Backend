@@ -22,6 +22,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<MakeSurpriseDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<SpecialDayCalendarService>();
+builder.Services.AddScoped<ProfileService>();
 builder.Services.AddControllers()
     .AddFluentValidation(fv =>
     {

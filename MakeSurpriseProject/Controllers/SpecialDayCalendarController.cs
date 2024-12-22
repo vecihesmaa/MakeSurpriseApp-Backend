@@ -22,23 +22,25 @@ namespace MakeSurpriseProject.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteSpecialDay(int specialDayId)
         {
-            var isDeleted = await specialDayCalendarService.DeleteSpecialDayAsync(specialDayId);
-            if (isDeleted)
+            if (specialDayId != null)
             {
-                return Ok(new { Message = "Başarıyla Silindi" });
+                var isDeleted = await specialDayCalendarService.DeleteSpecialDayAsync(specialDayId);
+                if (isDeleted)
+                {
+                    return Ok(new { Message = "Başarıyla Silindi" });
+                }
             }
-            else
-            {
-                return BadRequest(new { Message = "SİLİNEMEDİ" });
-            }
+            return BadRequest(new { Message = "Silinemedi" });
         }
 
         public async Task<IActionResult> GetAllSpecialDays(int userId)
         {
-            var specialDays = await specialDayCalendarService.GetAllSpecialDaysAsync(userId);
-
-            return Ok(specialDays);
-
+            if(userId != null)
+            {
+                var specialDays = await specialDayCalendarService.GetAllSpecialDaysAsync(userId);
+                return Ok(specialDays);
+            }
+            return BadRequest();   
         }
     }
 }

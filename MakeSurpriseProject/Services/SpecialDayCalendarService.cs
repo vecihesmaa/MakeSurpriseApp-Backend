@@ -28,16 +28,24 @@ namespace MakeSurpriseProject.Services
 
         public async Task<bool> DeleteSpecialDayAsync(int specialDayId)
         {
-            var specialDay = await context.SpecialDays.FirstOrDefaultAsync((specialDay) => specialDay.SpecialDayId == specialDayId);
-            context.SpecialDays.Remove(specialDay);
-            await context.SaveChangesAsync();
-            return true;
+            if (specialDayId != null)
+            {
+                var specialDay = await context.SpecialDays.FirstOrDefaultAsync((specialDay) => specialDay.SpecialDayId == specialDayId);
+                context.SpecialDays.Remove(specialDay);
+                await context.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
 
         public async Task<List<SpecialDay>> GetAllSpecialDaysAsync(int userId)
         {
-            var specilDays = await context.SpecialDays.Where((specialDay) => specialDay.UserId == userId).ToListAsync();
-            return specilDays;
+            if(userId != null)
+            {
+                var specilDays = await context.SpecialDays.Where((specialDay) => specialDay.UserId == userId).ToListAsync();
+                return specilDays;
+            }
+            return null;
         }
     }
 }

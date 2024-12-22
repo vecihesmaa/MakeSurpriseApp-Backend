@@ -332,3 +332,4 @@ C:\Users\casper\Downloads\MakeSurpriseProject\MakeSurpriseProject\MakeSurprisePr
 C:\Users\casper\Downloads\MakeSurpriseProject\MakeSurpriseProject\MakeSurpriseProject\obj\Debug\net8.0\MakeSurpriseProject.pdb
 C:\Users\casper\Downloads\MakeSurpriseProject\MakeSurpriseProject\MakeSurpriseProject\obj\Debug\net8.0\MakeSurpriseProject.genruntimeconfig.cache
 C:\Users\casper\Downloads\MakeSurpriseProject\MakeSurpriseProject\MakeSurpriseProject\obj\Debug\net8.0\ref\MakeSurpriseProject.dll
+C:\Users\casper\Downloads\MakeSurpriseProject\MakeSurpriseProject\MakeSurpriseProject\obj\Debug\net8.0\MakeSurpriseProject.sourcelink.json
