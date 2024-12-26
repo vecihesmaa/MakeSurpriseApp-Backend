@@ -7,12 +7,12 @@ namespace MakeSurpriseProject.Controllers
 {
     public class AuthController : Controller
     {
-        private readonly AuthService authService;
+        private readonly AuthManager authManager;
         private readonly IValidator<RegisterRequest> registerValidator;
         private readonly IValidator<LoginRequest> loginValidator;
-        public AuthController(AuthService _authService, IValidator<RegisterRequest> _registerValidator, IValidator<LoginRequest> _loginValidator)
+        public AuthController(AuthManager _authManager, IValidator<RegisterRequest> _registerValidator, IValidator<LoginRequest> _loginValidator)
         {
-            authService = _authService;
+            authManager = _authManager;
             registerValidator = _registerValidator;
             loginValidator = _loginValidator;
         }
@@ -26,12 +26,12 @@ namespace MakeSurpriseProject.Controllers
                 return BadRequest(validationResult.Errors.Select(e => new { Field = e.PropertyName, Error = e.ErrorMessage }));
             }
 
-            if (await authService.IsEmailRegisteredAsync(registerRequest.Email))
+            if (await authManager.IsEmailRegisteredAsync(registerRequest.Email))
             {
                 return Conflict(new { Message = "This email is already registered." });
             }
 
-            await authService.RegisterAsync(registerRequest);
+            await authManager.RegisterAsync(registerRequest);
             return Ok(new { Message = "User registered successfully" });
         }
 
@@ -44,7 +44,7 @@ namespace MakeSurpriseProject.Controllers
                 return BadRequest(validationResult.Errors.Select(e => new { Field = e.PropertyName, Error = e.ErrorMessage }));
             }
 
-            var loginData = await authService.LoginAsync(loginRequest);
+            var loginData = await authManager.LoginAsync(loginRequest);
 
             if (loginData is null)
             {

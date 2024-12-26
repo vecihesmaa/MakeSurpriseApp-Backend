@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MakeSurpriseProject.Services
 {
-    public class AuthService : IAuthService, IAuthValidatorService
+    public class AuthManager : IAuthService, IAuthValidatorService
     {
         private readonly MakeSurpriseDbContext context;
-        public AuthService(MakeSurpriseDbContext _context)
+        public AuthManager(MakeSurpriseDbContext _context)
         {
             context = _context;
         }

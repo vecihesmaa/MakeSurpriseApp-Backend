@@ -6,46 +6,99 @@ namespace MakeSurpriseProject.Controllers
 {
     public class ProfileController : Controller
     {
-        private readonly ProfileService profileService;
+        private readonly ProfileManager profileManager;
 
-        public ProfileController(ProfileService _profileService)
+        public ProfileController(ProfileManager _profileManager)
         {
-            profileService = _profileService;
+            profileManager = _profileManager;
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddProfile([FromBody]AddProfileRequest profile)
+        public async Task<IActionResult> AddProfile([FromBody] AddProfileRequest profile)
         {
-            int userRelativeId = await profileService.AddProfileAsync(profile);
-            return Ok(userRelativeId);
+            try
+            {
+                if (profile == null)
+                {
+                    return BadRequest(new { Message = "Geçersiz istek verisi. Profil bilgileri eksik." });
+                }
+
+                int userRelativeId = await profileManager.AddProfileAsync(profile);
+                if (userRelativeId == null)
+                {
+                    return BadRequest(new { Message = "Profil eklenemedi. Lütfen tekrar deneyiniz." });
+                }
+
+                return Ok(new { UserRelativeId = userRelativeId });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Bir hata oluştu.", Error = ex.Message });
+            }
         }
 
         public async Task<IActionResult> DeleteProfile(int userRelativeId)
         {
-            if(userRelativeId != null)
+            try
             {
-                bool isDeleted = await profileService.DeleteUserRelativeAsync(userRelativeId);
+                if (userRelativeId == null)
+                {
+                    return BadRequest(new { Message = "Geçersiz kullanıcı yakını ID." });
+                }
+
+                bool isDeleted = await profileManager.DeleteUserRelativeAsync(userRelativeId);
                 if (isDeleted)
                 {
-                    return Ok(new { Message = "Your profile has been successfully deleted." });
+                    return Ok(new { Message = "Profil başarıyla silindi." });
+                }
+                else
+                {
+                    return BadRequest(new { Message = "Profil silinemedi. Lütfen tekrar deneyiniz." });
                 }
             }
-            return BadRequest(new { Message = "An error occurred while deleting the profile. Please try again." });
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Bir hata oluştu.", Error = ex.Message });
+            }
         }
-
         public async Task<IActionResult> GetProfileTest()
         {
-            var profileTest = await profileService.GetProfileTestAsync();
-            return Ok(profileTest);
+            try
+            {
+                var profileTest = await profileManager.GetProfileTestAsync();
+                if (profileTest == null)
+                {
+                    return NotFound(new { Message = "Profil testi bulunamadı." });
+                }
+
+                return Ok(profileTest);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Bir hata oluştu.", Error = ex.Message });
+            }
         }
         public async Task<IActionResult> GetAllProfiles(GetAllProfilesRequest getAllProfilesModel)
         {
-            if(getAllProfilesModel != null)
+            try
             {
-                var profiles = await profileService.GetAllUserRelativesAsync(getAllProfilesModel);
+                if (getAllProfilesModel == null)
+                {
+                    return BadRequest(new { Message = "Geçersiz istek verisi. Tüm profilleri getirmek için gerekli bilgiler eksik." });
+                }
+
+                var profiles = await profileManager.GetAllUserRelativesAsync(getAllProfilesModel);
+                if (profiles == null || !profiles.Any())
+                {
+                    return NotFound(new { Message = "Herhangi bir profil bulunamadı." });
+                }
+
                 return Ok(profiles);
             }
-            return BadRequest(new { Message = "An error occurred while deleting the profile. Please try again." });
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Bir hata oluştu.", Error = ex.Message });
+            }
         }
     }
 }

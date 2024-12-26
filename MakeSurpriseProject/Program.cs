@@ -1,5 +1,6 @@
 using FluentValidation.AspNetCore;
 using MakeSurpriseProject.Contexts;
+using MakeSurpriseProject.DataAccess;
 using MakeSurpriseProject.Services;
 using MakeSurpriseProject.Validators;
 using Microsoft.EntityFrameworkCore;
@@ -20,9 +21,11 @@ builder.Services.AddCors(options =>
                           .AllowAnyHeader());
 });
 builder.Services.AddDbContext<MakeSurpriseDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<AuthService>();
-builder.Services.AddScoped<SpecialDayCalendarService>();
-builder.Services.AddScoped<ProfileService>();
+builder.Services.AddScoped<SpecialDayCalenderDal>();
+builder.Services.AddScoped<ProfileDal>();
+builder.Services.AddScoped<AuthManager>();
+builder.Services.AddScoped<SpecialDayCalendarManager>();
+builder.Services.AddScoped<ProfileManager>();
 builder.Services.AddControllers()
     .AddFluentValidation(fv =>
     {

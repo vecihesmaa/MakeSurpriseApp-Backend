@@ -6,41 +6,84 @@ namespace MakeSurpriseProject.Controllers
 {
     public class SpecialDayCalendarController : Controller
     {
-        private readonly SpecialDayCalendarService specialDayCalendarService;
-        public SpecialDayCalendarController(SpecialDayCalendarService _specialDayCalendarService)
+        private readonly SpecialDayCalendarManager specialDayCalendarManager;
+        public SpecialDayCalendarController(SpecialDayCalendarManager _specialDayCalendarManager)
         {
-            specialDayCalendarService = _specialDayCalendarService;
+            specialDayCalendarManager = _specialDayCalendarManager;
         }
 
         [HttpPost]
         public async Task<IActionResult> AddSpecialDay([FromBody] SpecialDayCalendarRequest specialDayRequest)
         {
-            var specialDay = await specialDayCalendarService.AddSpecialDayAsync(specialDayRequest);
-            return Ok(specialDay);
+            try
+            {
+                if (specialDayRequest == null)
+                {
+                    return BadRequest(new { Message = "Geçersiz istek verisi." });
+                }
+
+                var specialDay = await specialDayCalendarManager.AddSpecialDayAsync(specialDayRequest);
+                if (specialDay == null)
+                {
+                    return BadRequest(new { Message = "Özel gün eklenemedi." });
+                }
+
+                return Ok(specialDay);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Bir hata oluştu.", Error = ex.Message });
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> DeleteSpecialDay(int specialDayId)
         {
-            if (specialDayId != null)
+            try
             {
-                var isDeleted = await specialDayCalendarService.DeleteSpecialDayAsync(specialDayId);
+                if (specialDayId == null)
+                {
+                    return BadRequest(new { Message = "Geçersiz özel gün ID." });
+                }
+
+                var isDeleted = await specialDayCalendarManager.DeleteSpecialDayAsync(specialDayId);
                 if (isDeleted)
                 {
-                    return Ok(new { Message = "Başarıyla Silindi" });
+                    return Ok(new { Message = "Başarıyla silindi." });
+                }
+                else
+                {
+                    return BadRequest(new { Message = "Silinemedi, lütfen tekrar deneyin." });
                 }
             }
-            return BadRequest(new { Message = "Silinemedi" });
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Bir hata oluştu.", Error = ex.Message });
+            }
         }
 
+        [HttpGet]
         public async Task<IActionResult> GetAllSpecialDays(int userId)
         {
-            if(userId != null)
+            try
             {
-                var specialDays = await specialDayCalendarService.GetAllSpecialDaysAsync(userId);
+                if (userId == null)
+                {
+                    return BadRequest(new { Message = "Geçersiz kullanıcı ID." });
+                }
+
+                var specialDays = await specialDayCalendarManager.GetAllSpecialDaysAsync(userId);
+                if (specialDays == null || !specialDays.Any())
+                {
+                    return NotFound(new { Message = "Herhangi bir özel gün bulunamadı." });
+                }
+
                 return Ok(specialDays);
             }
-            return BadRequest();   
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Bir hata oluştu.", Error = ex.Message });
+            }
         }
     }
 }
