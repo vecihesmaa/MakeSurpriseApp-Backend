@@ -23,8 +23,15 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<MakeSurpriseDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<SpecialDayCalenderDal>();
 builder.Services.AddScoped<ProfileDal>();
+builder.Services.AddScoped<CargoTrackingManager>();
+builder.Services.AddScoped<EfCargoTrackingDal>();
 builder.Services.AddScoped<AuthManager>();
+builder.Services.AddScoped<ProfileManager>();
+builder.Services.AddScoped<EfUserProfileDal>();
 builder.Services.AddScoped<SpecialDayCalendarManager>();
+builder.Services.AddScoped<UserInfoManager>();
+builder.Services.AddScoped<EfUserInfoDal>();
+builder.Services.AddScoped<EfCargoTrackingDal>();
 builder.Services.AddScoped<ProfileManager>();
 builder.Services.AddControllers()
     .AddFluentValidation(fv =>

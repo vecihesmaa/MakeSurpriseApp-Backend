@@ -1,6 +1,7 @@
 ﻿using MakeSurpriseProject.Contexts;
 using MakeSurpriseProject.DataAccess;
 using MakeSurpriseProject.DTOs.Profile;
+using MakeSurpriseProject.DTOs.UserProfile;
 using MakeSurpriseProject.Entities;
 using MakeSurpriseProject.Models.Profile;
 
@@ -9,9 +10,11 @@ namespace MakeSurpriseProject.Services
     public class ProfileManager
     {
         private readonly ProfileDal _profileDal;
-        public ProfileManager(MakeSurpriseDbContext _context, ProfileDal profileDal)
+        private readonly EfUserProfileDal _efUserProfileDal;
+        public ProfileManager(MakeSurpriseDbContext _context, ProfileDal profileDal, EfUserProfileDal efUserProfileDal)
         {
             _profileDal = profileDal;
+            _efUserProfileDal = efUserProfileDal;
         }
 
         public async Task<int> AddProfileAsync(AddProfileRequest profile)
@@ -59,6 +62,18 @@ namespace MakeSurpriseProject.Services
         public async Task<List<UserRelative>> GetAllUserRelativesAsync(GetAllProfilesRequest getAllProfilesModel)
         {
             var result = await _profileDal.GetAllUserRelativesAsync(getAllProfilesModel);
+            return result;
+        }
+
+        public async Task<bool> IsPasswordRegisteredAsync(UserPasswordManagementRequest userPasswordManagement)
+        {
+            var result = await _efUserProfileDal.IsPasswordRegisteredAsync(userPasswordManagement);
+            return result;
+        }
+
+        public async Task<bool> ChangePasswordAsync(UserPasswordManagementRequest userPasswordManagement)
+        {
+            var result = await _efUserProfileDal.ChangePasswordAsync(userPasswordManagement);
             return result;
         }
     }
