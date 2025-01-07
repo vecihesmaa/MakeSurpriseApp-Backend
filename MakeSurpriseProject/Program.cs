@@ -1,4 +1,5 @@
 using FluentValidation.AspNetCore;
+using MakeSurpriseProject.Bussiness;
 using MakeSurpriseProject.Contexts;
 using MakeSurpriseProject.DataAccess;
 using MakeSurpriseProject.Services;
@@ -22,13 +23,18 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddDbContext<MakeSurpriseDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<SpecialDayCalenderDal>();
-builder.Services.AddScoped<ProfileDal>();
+builder.Services.AddScoped<ProfileDal>(); 
+builder.Services.AddScoped<AddressManager>();
+builder.Services.AddScoped<ShoppingManager>();
+builder.Services.AddScoped<EfShoppingDal>();
+builder.Services.AddScoped<EfAddressDal>();
 builder.Services.AddScoped<CargoTrackingManager>();
 builder.Services.AddScoped<EfCargoTrackingDal>();
 builder.Services.AddScoped<AuthManager>();
 builder.Services.AddScoped<ProfileManager>();
 builder.Services.AddScoped<EfUserProfileDal>();
 builder.Services.AddScoped<SpecialDayCalendarManager>();
+builder.Services.AddScoped<MailManager>();
 builder.Services.AddScoped<UserInfoManager>();
 builder.Services.AddScoped<EfUserInfoDal>();
 builder.Services.AddScoped<EfCargoTrackingDal>();

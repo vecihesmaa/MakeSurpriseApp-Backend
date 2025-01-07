@@ -1,8 +1,10 @@
-﻿using MakeSurpriseProject.Contexts;
+﻿using MakeSurpriseProject.Bussiness;
+using MakeSurpriseProject.Contexts;
 using MakeSurpriseProject.DataAccess;
 using MakeSurpriseProject.DTOs.Profile;
 using MakeSurpriseProject.DTOs.UserProfile;
 using MakeSurpriseProject.Entities;
+using MakeSurpriseProject.Models;
 using MakeSurpriseProject.Models.Profile;
 
 namespace MakeSurpriseProject.Services
@@ -11,10 +13,12 @@ namespace MakeSurpriseProject.Services
     {
         private readonly ProfileDal _profileDal;
         private readonly EfUserProfileDal _efUserProfileDal;
-        public ProfileManager(MakeSurpriseDbContext _context, ProfileDal profileDal, EfUserProfileDal efUserProfileDal)
+        private readonly MailManager _mailManager;
+        public ProfileManager(MakeSurpriseDbContext _context, ProfileDal profileDal, EfUserProfileDal efUserProfileDal, MailManager mailManager)
         {
             _profileDal = profileDal;
             _efUserProfileDal = efUserProfileDal;
+            _mailManager = mailManager;
         }
 
         public async Task<int> AddProfileAsync(AddProfileRequest profile)
@@ -73,8 +77,22 @@ namespace MakeSurpriseProject.Services
 
         public async Task<bool> ChangePasswordAsync(UserPasswordManagementRequest userPasswordManagement)
         {
-            var result = await _efUserProfileDal.ChangePasswordAsync(userPasswordManagement);
-            return result;
+            SendChangePasswordMailAsync();
+            //var result = await _efUserProfileDal.ChangePasswordAsync(userPasswordManagement);
+            //return result;
+            return true;
         }
+        public async Task SendChangePasswordMailAsync()
+        {
+            var sendMailRequest = new SendMailRequest
+            {
+                ToMail = "ceng.betulkircil@gmail.com", 
+                Subject = "Şifre Değiştirme Talebi",
+                Body = "<p>Merhaba,</p><p>Şifrenizi değiştirmek için <a href='https://example.com/reset-password'>buraya tıklayın</a>.</p>", 
+                IsHtml = true 
+            };
+            await _mailManager.SendEmailAsync(sendMailRequest);
+        }
+
     }
 }

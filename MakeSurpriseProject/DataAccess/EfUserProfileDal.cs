@@ -1,4 +1,5 @@
-﻿using MakeSurpriseProject.Contexts;
+﻿using MakeSurpriseProject.Bussiness;
+using MakeSurpriseProject.Contexts;
 using MakeSurpriseProject.DTOs.UserProfile;
 using Microsoft.EntityFrameworkCore;
 
