@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MakeSurpriseProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29bee47d97a35df3e732ed7c86b98da8a6a76e25")]
 [assembly: System.Reflection.AssemblyProductAttribute("MakeSurpriseProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MakeSurpriseProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

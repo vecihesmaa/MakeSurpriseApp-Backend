@@ -4,21 +4,42 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MakeSurpriseProject.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class MailController : ControllerBase
+    public class MailController : Controller
     {
-        private readonly MailManager mailManager;
+        private readonly MailManager _mailManager;
 
         public MailController(MailManager mailManager)
         {
-            this.mailManager = mailManager;
+            _mailManager = mailManager;
         }
 
-        [HttpPost("SendEmail")]
-        public Task SendEmailAsync([FromBody] SendMailRequest request)
+        [HttpPost]
+        public async Task<string> SendVerificationCode([FromBody] SendMailRequest request)
         {
-            return mailManager.SendEmailAsync(request);
+            var result = await _mailManager.SendChangePasswordMailAsync(request.ToMail);
+            return result;
         }
+
+        [HttpPost]
+        public async Task<IActionResult> VerifyResetCode([FromBody] VerifyResetCodeRequest request)
+        {
+
+            if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Code))
+            {
+                return BadRequest(new { message = "E-posta adresi veya doğrulama kodu eksik." });
+            }
+
+            bool isCodeValid = await _mailManager.VerifyResetCode(request.Email, request.Code);
+
+            if (isCodeValid)
+            {
+                return Ok(new { message = "Doğrulama kodu doğru." });
+            }
+            else
+            {
+                return BadRequest(new { message = "Doğrulama kodu yanlış." });
+            }
+        }
+
     }
 }

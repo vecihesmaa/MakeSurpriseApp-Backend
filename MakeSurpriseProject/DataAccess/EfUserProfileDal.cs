@@ -29,5 +29,20 @@ namespace MakeSurpriseProject.DataAccess
             }
             return false;
         }
+
+        public async Task<bool> ResetPasswordAsync(UserPasswordReset userPasswordReset)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userPasswordReset.Email);
+
+            if (user is not null)
+            {
+                user.Password = userPasswordReset.NewPassword;
+                await _context.SaveChangesAsync();
+                return true; 
+            }
+
+            return false; 
+        }
+
     }
 }

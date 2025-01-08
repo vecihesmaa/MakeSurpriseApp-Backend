@@ -1,6 +1,7 @@
 ﻿using System.Net.Mail;
 using System.Net;
 using MakeSurpriseProject.Models;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace MakeSurpriseProject.Bussiness
 {
@@ -8,9 +9,10 @@ namespace MakeSurpriseProject.Bussiness
     {
         private readonly SmtpClient _smtpClient;
         private readonly string _fromEmail;
-
-        public MailManager(IConfiguration configuration)
+        private readonly IMemoryCache _memoryCache;
+        public MailManager(IConfiguration configuration, IMemoryCache memoryCache)
         {
+            _memoryCache = memoryCache;
             var smtpSettings = configuration.GetSection("SmtpSettings");
             _fromEmail = smtpSettings["FromEmail"];
 
@@ -22,7 +24,7 @@ namespace MakeSurpriseProject.Bussiness
             };
         }
 
-        public async Task SendEmailAsync(SendMailRequest request)
+        private async Task SendVerificationCode(SendMailRequest request)
         {
             var mailMessage = new MailMessage
             {
@@ -44,5 +46,44 @@ namespace MakeSurpriseProject.Bussiness
                 Console.WriteLine($"E-posta gönderim hatası: {ex.Message}");
             }
         }
+
+        public async Task<string> SendChangePasswordMailAsync(string toMail)
+        {
+            Random generator = new Random();
+            string randomCode = generator.Next(100000, 1000000).ToString();
+
+            string emailBody = $@"
+                    <div style='font-family: Arial, sans-serif; line-height: 1.6;'>
+                        <div style='text-align: center; margin-bottom: 20px;'>
+                            <img src='https://cdn-icons-png.flaticon.com/512/3656/3656855.png' alt='Logo' style='width: 90px; height: 90px; margin-right: 2800px'>
+                        </div>
+                        <p>Merhaba,</p>
+                        <p>Şifrenizi değiştirmek için aşağıdaki kodu kullanabilirsiniz:</p>
+                        <p style='font-size: 20px; font-weight: bold; color: #333;'>{randomCode}</p>
+                        <p>Bu işlem isteğiniz dışında gerçekleştiyse lütfen bizimle mail adresimiz aracılığı ile iletişime geçiniz.</p>
+                        <p>İyi günler dileriz,</p>
+                        <p><strong>MakeSurprise Ekibi</strong></p>
+                    </div>";
+
+            var sendMailRequest = new SendMailRequest
+            {
+                ToMail = toMail,
+                Subject = "Şifre Değiştirme Talebi",
+                Body = emailBody,
+                IsHtml = true
+            };
+            SendVerificationCode(sendMailRequest);
+            _memoryCache.Set(toMail, randomCode, TimeSpan.FromMinutes(10));
+            return randomCode;
+        }
+        public async Task<bool> VerifyResetCode(string toMail, string code)
+        {
+            if (_memoryCache.TryGetValue(toMail, out string storedCode))
+            {
+                return storedCode == code;
+            }
+            return false;
+        }
+
     }
 }

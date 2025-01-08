@@ -39,6 +39,7 @@ builder.Services.AddScoped<UserInfoManager>();
 builder.Services.AddScoped<EfUserInfoDal>();
 builder.Services.AddScoped<EfCargoTrackingDal>();
 builder.Services.AddScoped<ProfileManager>();
+builder.Services.AddMemoryCache();
 builder.Services.AddControllers()
     .AddFluentValidation(fv =>
     {

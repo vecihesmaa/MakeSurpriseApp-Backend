@@ -41,6 +41,18 @@ namespace MakeSurpriseProject.Controllers
             }
             return BadRequest();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword([FromBody] UserPasswordReset userPasswordReset)
+        {
+            var isSucceedChangePassword = await profileManager.ResetPasswordAsync(userPasswordReset);
+            if (isSucceedChangePassword)
+            {
+                return Ok("");
+            }
+            return BadRequest();
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetUserInfo(int userId)
         {
