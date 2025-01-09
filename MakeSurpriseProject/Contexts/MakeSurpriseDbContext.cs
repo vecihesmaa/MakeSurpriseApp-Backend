@@ -50,13 +50,13 @@ public partial class MakeSurpriseDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=MakeSurpriseDB;Trusted_Connection=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=MakeSurpriseDB;Trusted_Connection=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Address>(entity =>
         {
-            entity.HasKey(e => e.AddressId).HasName("PK__Addresse__091C2AFB02D51DA8");
+            entity.HasKey(e => e.AddressId).HasName("PK__Addresse__091C2AFB6629C755");
 
             entity.Property(e => e.AddressTag)
                 .HasMaxLength(50)
@@ -65,24 +65,24 @@ public partial class MakeSurpriseDbContext : DbContext
 
             entity.HasOne(d => d.District).WithMany(p => p.Addresses)
                 .HasForeignKey(d => d.DistrictId)
-                .HasConstraintName("FK__Addresses__Distr__534D60F1");
+                .HasConstraintName("FK__Addresses__Distr__6A30C649");
 
             entity.HasOne(d => d.Neighbourhood).WithMany(p => p.Addresses)
                 .HasForeignKey(d => d.NeighbourhoodId)
-                .HasConstraintName("FK__Addresses__Neigh__5441852A");
+                .HasConstraintName("FK__Addresses__Neigh__6B24EA82");
 
             entity.HasOne(d => d.Province).WithMany(p => p.Addresses)
                 .HasForeignKey(d => d.ProvinceId)
-                .HasConstraintName("FK__Addresses__Provi__52593CB8");
+                .HasConstraintName("FK__Addresses__Provi__693CA210");
 
             entity.HasOne(d => d.User).WithMany(p => p.Addresses)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Addresses__FullA__5165187F");
+                .HasConstraintName("FK__Addresses__UserI__68487DD7");
         });
 
         modelBuilder.Entity<Cargo>(entity =>
         {
-            entity.HasKey(e => e.CargoId).HasName("PK__CARGO__B4E665CD64D2F1C2");
+            entity.HasKey(e => e.CargoId).HasName("PK__CARGO__B4E665CD2DE04E17");
 
             entity.ToTable("CARGO");
 
@@ -93,103 +93,103 @@ public partial class MakeSurpriseDbContext : DbContext
             entity.HasOne(d => d.OrderItem).WithMany(p => p.Cargos)
                 .HasForeignKey(d => d.OrderItemId)
                 .OnDelete(DeleteBehavior.Cascade)
-                .HasConstraintName("FK__CARGO__OrderItem__2B0A656D");
+                .HasConstraintName("FK__CARGO__OrderItem__6C190EBB");
         });
 
         modelBuilder.Entity<FormAnswer>(entity =>
         {
-            entity.HasKey(e => e.FormAnswerId).HasName("PK__FormAnsw__896C79B6713EF3AD");
+            entity.HasKey(e => e.FormAnswerId).HasName("PK__FormAnsw__896C79B6A7D545B2");
 
             entity.HasOne(d => d.EighthQuestionAnswerNavigation).WithMany(p => p.FormAnswerEighthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.EighthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Eight__03F0984C");
+                .HasConstraintName("FK__FormAnswe__Eight__70DDC3D8");
 
             entity.HasOne(d => d.EleventhQuestionAnswerNavigation).WithMany(p => p.FormAnswerEleventhQuestionAnswerNavigations)
                 .HasForeignKey(d => d.EleventhQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Eleve__06CD04F7");
+                .HasConstraintName("FK__FormAnswe__Eleve__73BA3083");
 
             entity.HasOne(d => d.FifteenthQuestionAnswerNavigation).WithMany(p => p.FormAnswerFifteenthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.FifteenthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Fifte__0A9D95DB");
+                .HasConstraintName("FK__FormAnswe__Fifte__778AC167");
 
             entity.HasOne(d => d.FifthQuestionAnswerNavigation).WithMany(p => p.FormAnswerFifthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.FifthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Fifth__01142BA1");
+                .HasConstraintName("FK__FormAnswe__Fifth__6E01572D");
 
             entity.HasOne(d => d.FirstQuestionAnswerNavigation).WithMany(p => p.FormAnswerFirstQuestionAnswerNavigations)
                 .HasForeignKey(d => d.FirstQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__First__7D439ABD");
+                .HasConstraintName("FK__FormAnswe__First__787EE5A0");
 
             entity.HasOne(d => d.FourteenthQuestionAnswerNavigation).WithMany(p => p.FormAnswerFourteenthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.FourteenthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Fourt__09A971A2");
+                .HasConstraintName("FK__FormAnswe__Fourt__76969D2E");
 
             entity.HasOne(d => d.FourthQuestionAnswerNavigation).WithMany(p => p.FormAnswerFourthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.FourthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Fourt__00200768");
+                .HasConstraintName("FK__FormAnswe__Fourt__6D0D32F4");
 
             entity.HasOne(d => d.NinthQuestionAnswerNavigation).WithMany(p => p.FormAnswerNinthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.NinthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Ninth__04E4BC85");
+                .HasConstraintName("FK__FormAnswe__Ninth__71D1E811");
 
             entity.HasOne(d => d.SecondQuestionAnswerNavigation).WithMany(p => p.FormAnswerSecondQuestionAnswerNavigations)
                 .HasForeignKey(d => d.SecondQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Secon__7E37BEF6");
+                .HasConstraintName("FK__FormAnswe__Secon__797309D9");
 
             entity.HasOne(d => d.SeventhQuestionAnswerNavigation).WithMany(p => p.FormAnswerSeventhQuestionAnswerNavigations)
                 .HasForeignKey(d => d.SeventhQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Seven__02FC7413");
+                .HasConstraintName("FK__FormAnswe__Seven__6FE99F9F");
 
             entity.HasOne(d => d.SixthQuestionAnswerNavigation).WithMany(p => p.FormAnswerSixthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.SixthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Sixth__02084FDA");
+                .HasConstraintName("FK__FormAnswe__Sixth__6EF57B66");
 
             entity.HasOne(d => d.TenthQuestionAnswerNavigation).WithMany(p => p.FormAnswerTenthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.TenthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Tenth__05D8E0BE");
+                .HasConstraintName("FK__FormAnswe__Tenth__72C60C4A");
 
             entity.HasOne(d => d.ThirdQuestionAnswerNavigation).WithMany(p => p.FormAnswerThirdQuestionAnswerNavigations)
                 .HasForeignKey(d => d.ThirdQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Third__7F2BE32F");
+                .HasConstraintName("FK__FormAnswe__Third__7A672E12");
 
             entity.HasOne(d => d.ThirteenthQuestionAnswerNavigation).WithMany(p => p.FormAnswerThirteenthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.ThirteenthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Thirt__08B54D69");
+                .HasConstraintName("FK__FormAnswe__Thirt__75A278F5");
 
             entity.HasOne(d => d.TwelfthQuestionAnswerNavigation).WithMany(p => p.FormAnswerTwelfthQuestionAnswerNavigations)
                 .HasForeignKey(d => d.TwelfthQuestionAnswer)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FormAnswe__Twelf__07C12930");
+                .HasConstraintName("FK__FormAnswe__Twelf__74AE54BC");
         });
 
         modelBuilder.Entity<FormOption>(entity =>
         {
-            entity.HasKey(e => e.FormOptionId).HasName("PK__FormOpti__58A8240F9CFA9DF1");
+            entity.HasKey(e => e.FormOptionId).HasName("PK__FormOpti__58A8240FF29DB245");
 
             entity.Property(e => e.OptionText).HasColumnType("text");
 
             entity.HasOne(d => d.FormQuestion).WithMany(p => p.FormOptions)
                 .HasForeignKey(d => d.FormQuestionId)
-                .HasConstraintName("FK__FormOptio__FormQ__5FB337D6");
+                .HasConstraintName("FK__FormOptio__FormQ__7B5B524B");
         });
 
         modelBuilder.Entity<FormQuestion>(entity =>
         {
-            entity.HasKey(e => e.FormQuestionId).HasName("PK__FormQues__C7510807B0FFC979");
+            entity.HasKey(e => e.FormQuestionId).HasName("PK__FormQues__C7510807A1DF2ECC");
 
             entity.Property(e => e.QuestionText).HasColumnType("text");
         });
@@ -214,7 +214,7 @@ public partial class MakeSurpriseDbContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BCF65B06518");
+            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BCFB9B0727B");
 
             entity.Property(e => e.OrderDate)
                 .HasDefaultValueSql("(getdate())")
@@ -224,12 +224,12 @@ public partial class MakeSurpriseDbContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.Cascade)
-                .HasConstraintName("FK__Orders__UserId__1AD3FDA4");
+                .HasConstraintName("FK__Orders__UserId__00200768");
         });
 
         modelBuilder.Entity<OrderItem>(entity =>
         {
-            entity.HasKey(e => e.OrderItemId).HasName("PK__OrderIte__57ED0681AEA12BAF");
+            entity.HasKey(e => e.OrderItemId).HasName("PK__OrderIte__57ED068120FCF215");
 
             entity.Property(e => e.GiftNote).HasColumnType("text");
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
@@ -237,22 +237,22 @@ public partial class MakeSurpriseDbContext : DbContext
             entity.HasOne(d => d.Address).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.AddressId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__OrderItem__Addre__282DF8C2");
+                .HasConstraintName("FK__OrderItem__Addre__7F2BE32F");
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.OrderId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__OrderItem__Order__2645B050");
+                .HasConstraintName("FK__OrderItem__Order__7D439ABD");
 
             entity.HasOne(d => d.UserRelative).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.UserRelativeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__OrderItem__UserR__2739D489");
+                .HasConstraintName("FK__OrderItem__UserR__7E37BEF6");
         });
 
         modelBuilder.Entity<Rating>(entity =>
         {
-            entity.HasKey(e => e.RatingsId).HasName("PK__RATINGS__A85B63DB298D9461");
+            entity.HasKey(e => e.RatingsId).HasName("PK__RATINGS__A85B63DB8899C5BE");
 
             entity.ToTable("RATINGS");
 
@@ -260,11 +260,11 @@ public partial class MakeSurpriseDbContext : DbContext
 
             entity.HasOne(d => d.OrderItem).WithMany(p => p.Ratings)
                 .HasForeignKey(d => d.OrderItemId)
-                .HasConstraintName("FK__RATINGS__OrderIt__2DE6D218");
+                .HasConstraintName("FK__RATINGS__OrderIt__01142BA1");
 
             entity.HasOne(d => d.User).WithMany(p => p.Ratings)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__RATINGS__UserId__2EDAF651");
+                .HasConstraintName("FK__RATINGS__UserId__02084FDA");
         });
 
         modelBuilder.Entity<Sehirler>(entity =>
@@ -295,7 +295,7 @@ public partial class MakeSurpriseDbContext : DbContext
 
         modelBuilder.Entity<ShoppingCart>(entity =>
         {
-            entity.HasKey(e => e.ShoppingCartId).HasName("PK__Shopping__7A789AE49F2DEAF9");
+            entity.HasKey(e => e.ShoppingCartId).HasName("PK__Shopping__7A789AE461244E65");
 
             entity.Property(e => e.Note).HasColumnType("text");
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
@@ -303,17 +303,17 @@ public partial class MakeSurpriseDbContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.ShoppingCarts)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ShoppingC__UserI__160F4887");
+                .HasConstraintName("FK__ShoppingC__UserI__03F0984C");
 
             entity.HasOne(d => d.UserRelative).WithMany(p => p.ShoppingCarts)
                 .HasForeignKey(d => d.UserRelativeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ShoppingC__UserR__17036CC0");
+                .HasConstraintName("FK__ShoppingC__UserR__04E4BC85");
         });
 
         modelBuilder.Entity<SpecialDay>(entity =>
         {
-            entity.HasKey(e => e.SpecialDayId).HasName("PK__SpecialD__58DACBCEE30C6E04");
+            entity.HasKey(e => e.SpecialDayId).HasName("PK__SpecialD__58DACBCEAFD1CA08");
 
             entity.Property(e => e.SpecialDayDate).HasColumnType("datetime");
             entity.Property(e => e.Title)
@@ -322,14 +322,14 @@ public partial class MakeSurpriseDbContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.SpecialDays)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__SpecialDa__UserI__31B762FC");
+                .HasConstraintName("FK__SpecialDa__UserI__05D8E0BE");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C1CB1383B");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4CE5509382");
 
-            entity.HasIndex(e => e.Email, "UQ__Users__A9D10534F54FFD6E").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Users__A9D105342374CC38").IsUnique();
 
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
@@ -347,7 +347,7 @@ public partial class MakeSurpriseDbContext : DbContext
 
         modelBuilder.Entity<UserProfile>(entity =>
         {
-            entity.HasKey(e => e.ProfileId).HasName("PK__UserProf__290C88E42F8289E6");
+            entity.HasKey(e => e.ProfileId).HasName("PK__UserProf__290C88E431FD1DEB");
 
             entity.Property(e => e.PhoneNumber)
                 .HasMaxLength(15)
@@ -355,12 +355,12 @@ public partial class MakeSurpriseDbContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.UserProfiles)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserProfi__UserI__4E88ABD4");
+                .HasConstraintName("FK__UserProfi__UserI__06CD04F7");
         });
 
         modelBuilder.Entity<UserRelative>(entity =>
         {
-            entity.HasKey(e => e.UserRelativeId).HasName("PK__UserRela__66E9C5B2DCC2A33D");
+            entity.HasKey(e => e.UserRelativeId).HasName("PK__UserRela__66E9C5B29B36EC96");
 
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
@@ -378,11 +378,11 @@ public partial class MakeSurpriseDbContext : DbContext
             entity.HasOne(d => d.FormAnswer).WithMany(p => p.UserRelatives)
                 .HasForeignKey(d => d.FormAnswerId)
                 .OnDelete(DeleteBehavior.SetNull)
-                .HasConstraintName("FK__UserRelat__FormA__0F624AF8");
+                .HasConstraintName("FK__UserRelat__FormA__08B54D69");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserRelatives)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserRelat__UserI__0E6E26BF");
+                .HasConstraintName("FK__UserRelat__UserI__07C12930");
         });
 
         OnModelCreatingPartial(modelBuilder);

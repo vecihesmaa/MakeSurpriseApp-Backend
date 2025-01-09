@@ -13,5 +13,7 @@ public partial class SpecialDay
 
     public int UserId { get; set; }
 
+    public bool? IsNotified { get; set; }
+
     public virtual User User { get; set; } = null!;
 }

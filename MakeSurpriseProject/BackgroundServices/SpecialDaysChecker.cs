@@ -1,12 +1,9 @@
-﻿using MakeSurpriseProject.Bussiness;
-using MakeSurpriseProject.Contexts;
+﻿using MakeSurpriseProject.Contexts;
 using MakeSurpriseProject.Entities;
 using MakeSurpriseProject.Hubs;
 using MakeSurpriseProject.Models;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
 
@@ -36,6 +33,7 @@ namespace MakeSurpriseProject.BackgroundServices
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            var isNotified = false;
             while (!stoppingToken.IsCancellationRequested)
             {
                 using var scope = _serviceProvider.CreateScope();
@@ -53,30 +51,32 @@ namespace MakeSurpriseProject.BackgroundServices
                 foreach (var specialDay in specialDays)
                 {
                     var email = specialDay.User?.Email;
-                    if (!string.IsNullOrEmpty(email))
+                    if (!string.IsNullOrEmpty(email) && !(specialDay.IsNotified ?? false))
                     {
                         await SendSpecialDaysMailAsync(email, specialDay);
 
-                        //specialDay.IsNotified = true;
-                    }
-                    //if (!string.IsNullOrEmpty(specialDay.Title))
-                    //{
-                    //    Console.WriteLine("huba girdi");
-                    //    await _hubContext.Clients.User(specialDay.User?.UserId.ToString()).SendAsync(
-                    //        "receiveNotification",
-                    //        $"Yaklaşan özel gün: {specialDay.Title}");
-                    //    Console.WriteLine("Notification gonderildi");
-                    //}
-                    if (!string.IsNullOrEmpty(specialDay.Title))
-                    {
-                        await _hubContext.Clients.All.SendAsync(
-                            "receiveNotification",
-                            $"Yaklaşan özel gün: {specialDay.Title}");
-                        Console.WriteLine("Notification gönderildi");
+                        //if (!string.IsNullOrEmpty(specialDay.Title))
+                        //{
+                        //    Console.WriteLine("huba girdi");
+                        //    await _hubContext.Clients.User(specialDay.User?.UserId.ToString()).SendAsync(
+                        //        "receiveNotification",
+                        //        $"Yaklaşan özel gün: {specialDay.Title}");
+                        //    Console.WriteLine("Notification gonderildi");
+                        //}
+
+                        if (!string.IsNullOrEmpty(specialDay.Title))
+                        {
+                            await _hubContext.Clients.All.SendAsync(
+                                "receiveNotification",
+                                $"{specialDay.Title}");
+                            Console.WriteLine("Notification gönderildi");
+                        }
+                        specialDay.IsNotified = true;
+                        await dbContext.SaveChangesAsync();
                     }
                 }
 
-                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(0.5), stoppingToken);
             }
         }
 

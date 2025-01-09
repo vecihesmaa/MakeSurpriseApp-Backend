@@ -21,6 +21,7 @@ namespace MakeSurpriseProject.Services
                 SpecialDayDate = specialDayDto.SpecialDayDate,
                 Title = specialDayDto.Title,
                 UserId = specialDayDto.UserId,
+                IsNotified = false
             };
             var result = await _specialDayCalenderDal.AddSpecialDayAsync(specialDay);
             return result;
