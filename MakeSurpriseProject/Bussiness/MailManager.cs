@@ -24,7 +24,7 @@ namespace MakeSurpriseProject.Bussiness
             };
         }
 
-        private async Task SendVerificationCode(SendMailRequest request)
+        public async Task SendMail(SendMailRequest request)
         {
             var mailMessage = new MailMessage
             {
@@ -72,7 +72,7 @@ namespace MakeSurpriseProject.Bussiness
                 Body = emailBody,
                 IsHtml = true
             };
-            SendVerificationCode(sendMailRequest);
+            SendMail(sendMailRequest);
             _memoryCache.Set(toMail, randomCode, TimeSpan.FromMinutes(10));
             return randomCode;
         }

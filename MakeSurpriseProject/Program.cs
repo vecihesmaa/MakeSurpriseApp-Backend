@@ -1,9 +1,12 @@
 using FluentValidation.AspNetCore;
+using MakeSurpriseProject.BackgroundServices;
 using MakeSurpriseProject.Bussiness;
 using MakeSurpriseProject.Contexts;
 using MakeSurpriseProject.DataAccess;
+using MakeSurpriseProject.Hubs;
 using MakeSurpriseProject.Services;
 using MakeSurpriseProject.Validators;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,6 +43,8 @@ builder.Services.AddScoped<EfUserInfoDal>();
 builder.Services.AddScoped<EfCargoTrackingDal>();
 builder.Services.AddScoped<ProfileManager>();
 builder.Services.AddMemoryCache();
+builder.Services.AddSignalR();
+builder.Services.AddHostedService<SpecialDaysChecker>();
 builder.Services.AddControllers()
     .AddFluentValidation(fv =>
     {
@@ -57,12 +62,16 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+app.UseRouting();
 app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseRouting();
 
-app.UseEndpoints(endpoints => endpoints.MapDefaultControllerRoute());
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapDefaultControllerRoute();
+    endpoints.MapHub<SpecialDaysHub>("/specialDaysHub");
+});
 
 app.UseAuthorization();
 app.MapControllers();
