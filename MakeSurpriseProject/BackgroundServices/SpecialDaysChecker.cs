@@ -75,8 +75,7 @@ namespace MakeSurpriseProject.BackgroundServices
                         await dbContext.SaveChangesAsync();
                     }
                 }
-
-                await Task.Delay(TimeSpan.FromMinutes(0.5), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
             }
         }
 
@@ -105,7 +104,7 @@ namespace MakeSurpriseProject.BackgroundServices
         {
             var mailMessage = new MailMessage
             {
-                From = new MailAddress(_fromEmail, "RequestFlow"),
+                From = new MailAddress(_fromEmail, "MakeSurprise"),
                 Subject = request.Subject,
                 Body = request.Body,
                 IsBodyHtml = request.IsHtml,
