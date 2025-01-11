@@ -8,9 +8,9 @@ namespace MakeSurpriseProject.DataAccess
 {
     public class ProfileDal
     {
-        private readonly MakeSurpriseDbContext _context;
+        private readonly MakeSurpriseFinalDbContext _context;
 
-        public ProfileDal(MakeSurpriseDbContext context)
+        public ProfileDal(MakeSurpriseFinalDbContext context)
         {
             _context = context;
         }

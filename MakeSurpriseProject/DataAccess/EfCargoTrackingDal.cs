@@ -6,9 +6,9 @@ namespace MakeSurpriseProject.DataAccess
 {
     public class EfCargoTrackingDal
     {
-        private readonly MakeSurpriseDbContext _context;
+        private readonly MakeSurpriseFinalDbContext _context;
 
-        public EfCargoTrackingDal(MakeSurpriseDbContext context)
+        public EfCargoTrackingDal(MakeSurpriseFinalDbContext context)
         {
             _context = context;
         }

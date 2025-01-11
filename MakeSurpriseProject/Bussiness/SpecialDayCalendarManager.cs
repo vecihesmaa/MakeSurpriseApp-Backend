@@ -9,7 +9,7 @@ namespace MakeSurpriseProject.Services
     public class SpecialDayCalendarManager
     {
         private readonly SpecialDayCalenderDal _specialDayCalenderDal;
-        public SpecialDayCalendarManager(MakeSurpriseDbContext _context, SpecialDayCalenderDal specialDayCalenderDal)
+        public SpecialDayCalendarManager(MakeSurpriseFinalDbContext _context, SpecialDayCalenderDal specialDayCalenderDal)
         {
             _specialDayCalenderDal = specialDayCalenderDal;
         }

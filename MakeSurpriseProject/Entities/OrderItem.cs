@@ -17,11 +17,15 @@ public partial class OrderItem
 
     public int AddressId { get; set; }
 
+    public int? ProductId { get; set; }
+
     public virtual Address Address { get; set; } = null!;
 
     public virtual ICollection<Cargo> Cargos { get; set; } = new List<Cargo>();
 
     public virtual Order Order { get; set; } = null!;
+
+    public virtual Product? Product { get; set; }
 
     public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
 

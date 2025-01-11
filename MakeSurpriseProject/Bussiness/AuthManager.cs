@@ -8,8 +8,8 @@ namespace MakeSurpriseProject.Services
 {
     public class AuthManager : IAuthService, IAuthValidatorService
     {
-        private readonly MakeSurpriseDbContext context;
-        public AuthManager(MakeSurpriseDbContext _context)
+        private readonly MakeSurpriseFinalDbContext context;
+        public AuthManager(MakeSurpriseFinalDbContext _context)
         {
             context = _context;
         }

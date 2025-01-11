@@ -37,7 +37,7 @@ namespace MakeSurpriseProject.BackgroundServices
             while (!stoppingToken.IsCancellationRequested)
             {
                 using var scope = _serviceProvider.CreateScope();
-                var dbContext = scope.ServiceProvider.GetRequiredService<MakeSurpriseDbContext>();
+                var dbContext = scope.ServiceProvider.GetRequiredService<MakeSurpriseFinalDbContext>();
 
                 var now = DateTime.Now;
                 var tomorrow = now.AddDays(1).Date;

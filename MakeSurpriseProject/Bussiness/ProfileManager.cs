@@ -11,7 +11,7 @@ namespace MakeSurpriseProject.Services
     {
         private readonly ProfileDal _profileDal;
         private readonly EfUserProfileDal _efUserProfileDal;
-        public ProfileManager(MakeSurpriseDbContext _context, ProfileDal profileDal, EfUserProfileDal efUserProfileDal)
+        public ProfileManager(MakeSurpriseFinalDbContext _context, ProfileDal profileDal, EfUserProfileDal efUserProfileDal)
         {
             _profileDal = profileDal;
             _efUserProfileDal = efUserProfileDal;

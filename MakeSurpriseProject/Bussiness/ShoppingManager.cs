@@ -33,11 +33,11 @@ namespace MakeSurpriseProject.Services
         {
             var result = await efShoppingDal.GetAllShoppingDetailsAsync(userId);
             return result;
-        }   
+        }
 
-        //public async Task FinalizeOrderAsync(OrderRequest _order)
-        //{
-            
-        //}
+        public async Task FinalizeOrderAsync(OrderRequest _order)
+        {
+            await efShoppingDal.FinalizeOrderAsync(_order);
+        }
     }
 }

@@ -8,9 +8,9 @@ namespace MakeSurpriseProject.DataAccess
 {
     public class EfAddressDal
     {
-        private readonly MakeSurpriseDbContext _context;
+        private readonly MakeSurpriseFinalDbContext _context;
 
-        public EfAddressDal(MakeSurpriseDbContext context)
+        public EfAddressDal(MakeSurpriseFinalDbContext context)
         {
             _context = context;
         }

@@ -7,8 +7,8 @@ namespace MakeSurpriseProject.DataAccess
 {
     public class SpecialDayCalenderDal
     {
-        private readonly MakeSurpriseDbContext _context;
-        public SpecialDayCalenderDal(MakeSurpriseDbContext context)
+        private readonly MakeSurpriseFinalDbContext _context;
+        public SpecialDayCalenderDal(MakeSurpriseFinalDbContext context)
         {
             _context = context;
         }

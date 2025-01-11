@@ -9,10 +9,10 @@ namespace MakeSurpriseProject.Services
 {
     public class AddressManager
     {
-        private readonly MakeSurpriseDbContext context;
+        private readonly MakeSurpriseFinalDbContext context;
         private readonly EfAddressDal efAddressDal;
 
-        public AddressManager(MakeSurpriseDbContext _context, EfAddressDal _efAddressDal)
+        public AddressManager(MakeSurpriseFinalDbContext _context, EfAddressDal _efAddressDal)
         {
             context = _context;
             efAddressDal = _efAddressDal;

@@ -7,9 +7,9 @@ namespace MakeSurpriseProject.DataAccess
 {
     public class EfUserInfoDal
     {
-        private readonly MakeSurpriseDbContext _context;
+        private readonly MakeSurpriseFinalDbContext _context;
 
-        public EfUserInfoDal(MakeSurpriseDbContext context)
+        public EfUserInfoDal(MakeSurpriseFinalDbContext context)
         {
             _context = context;
         }

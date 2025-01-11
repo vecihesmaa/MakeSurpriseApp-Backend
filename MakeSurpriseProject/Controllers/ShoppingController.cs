@@ -41,6 +41,14 @@ namespace MakeSurpriseProject.Controllers
         [HttpPost]
         public async Task<IActionResult> FinalizeOrder([FromBody] OrderRequest order)
         {
+            try
+            {
+                await shoppingManager.FinalizeOrderAsync(order);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
             return Ok(null);
         }
     }
