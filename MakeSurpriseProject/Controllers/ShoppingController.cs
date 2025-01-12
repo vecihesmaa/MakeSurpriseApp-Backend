@@ -49,7 +49,7 @@ namespace MakeSurpriseProject.Controllers
             {
                 return BadRequest();
             }
-            return Ok(null);
+            return Ok();
         }
     }
 }

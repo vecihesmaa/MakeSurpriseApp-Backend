@@ -23,7 +23,7 @@ namespace MakeSurpriseProject.Services
         public async Task<bool> ChangeUserInfoAsync(UserInfoRequest userInfo)
         {
             var result = await _efUserInfoDal.ChangeUserInfoAsync(userInfo);
-            return false;
+            return result;
         }
     }
 }

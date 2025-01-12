@@ -82,14 +82,20 @@ namespace MakeSurpriseProject.BackgroundServices
         private async Task SendSpecialDaysMailAsync(string toMail, SpecialDay specialDay)
         {
             string emailBody = $@"
-            <div style='font-family: Arial, sans-serif; line-height: 1.6;'>
-                <div style='text-align: center; margin-bottom: 20px;'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/3656/3656855.png' alt='Logo' style='width: 90px; height: 90px; margin-right: 2800px'>
-                </div>
-                <p>Takviminize eklediğiniz {specialDay.Title} özel günü yaklaşıyor!</p>
-                <p> Sevdikleriniz için bu özel günü ve hediye vermeyi unutmayın!</p>
-            </div>";
-
+                <div style='font-family: Arial, sans-serif; line-height: 1.6; padding: 20px;'>
+                    <div style='text-align: center; margin-bottom: 20px;'>
+                        <img src='https://cdn-icons-png.flaticon.com/512/3656/3656855.png' 
+                             alt='Logo' 
+                             style='width: 150px; height: 150px; margin-bottom: 20px;'>
+                    </div>
+                    <p style='font-size: 18px; color: #333; text-align: center;'>
+                        Takviminize eklediğiniz 
+                        <strong style='color: #FF5733;'>{specialDay.Title}</strong> özel günü yaklaşıyor! 
+                    </p>
+                    <p style='font-size: 16px; color: #555; text-align: center;'>
+                        Sevdikleriniz için bu özel günü ve hediye vermeyi unutmayın!
+                    </p>
+                </div>";
             var sendMailRequest = new SendMailRequest
             {
                 ToMail = toMail,

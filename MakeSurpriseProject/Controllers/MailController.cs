@@ -14,10 +14,14 @@ namespace MakeSurpriseProject.Controllers
         }
 
         [HttpPost]
-        public async Task<string> SendVerificationCode([FromBody] SendMailRequest request)
+        public async Task<IActionResult> SendVerificationCode([FromBody] SendMailRequest request)
         {
             var result = await _mailManager.SendChangePasswordMailAsync(request.ToMail);
-            return result;
+            if (result.Contains("Sistemde böyle bir e-posta adresi bulunmamaktadır"))
+            {
+                return BadRequest(new { message = result }); 
+            }
+            return Ok(new { message = "Doğrulama kodu e-posta adresinize gönderildi." });
         }
 
         [HttpPost]

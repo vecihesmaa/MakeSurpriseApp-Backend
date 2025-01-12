@@ -25,6 +25,7 @@ namespace MakeSurpriseProject.DataAccess
                 .Include(o => o.Address)
                     .ThenInclude(a => a.Neighbourhood)
                 .Include(o => o.UserRelative)
+                .AsNoTracking()
                 .ToListAsync();
 
             return orderItems;

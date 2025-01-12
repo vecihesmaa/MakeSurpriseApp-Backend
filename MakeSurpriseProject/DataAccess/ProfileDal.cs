@@ -25,6 +25,12 @@ namespace MakeSurpriseProject.DataAccess
             return userRelative.UserRelativeId;
         }
 
+        public async Task<User> GetUserByEmailAsync(string email)
+        {
+            return await _context.Users
+                   .FirstOrDefaultAsync(u => u.Email == email);
+        }
+
         private UserRelative GenerateUserRelativeEntity(FormAnswer formAnswer, AddProfileRequest profile)
         {
             UserRelative userRelative = new UserRelative()
