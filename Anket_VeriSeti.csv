@@ -1,0 +1,177 @@
+﻿Id;Cinsiyet;Yas;IlgiAlani;Renk;Butce;Tatil;Dekorasyon;Giyim;Işiklandirma
+1;Kadın;18-25; Teknoloji ve Cihazlar;Mor; 501-1000 TL;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+2;Kadın;18-25; Teknoloji ve Cihazlar; Yeşil;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Bohem ve etnik;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+3;Erkek;26-35; Teknoloji ve Cihazlar;Gri;5001 TL ;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+4;Kadın;18-25; Teknoloji ve Cihazlar ; Beyaz;1001-2000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+5;Erkek;18-25; Teknoloji ve Cihazlar; Siyah;1001-2000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Rahat ve spor giyim tarzı;Aydınlatılmış şehir manzarası
+6;Kadın;18-25; Teknoloji ve Cihazlar;Mavi; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Bohem ve etnik;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+7;Erkek;18-25;Kitaplar ve Edebiyat; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+8;Erkek;26-35; Moda ve Giyim; Beyaz;5001 TL ;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+9;Kadın;18-25;Kitaplar ve Edebiyat; Siyah;1001-2000 TL;Plaj tatilleri;Sanatsal ve yaratıcı;Bohem ve özgür ruhlu giyim tarzı;Loş ve romantik mum ışığı
+10;Kadın;18-25;Teknoloji ve Cihazlar;Mavi;1001-2000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+11;Erkek;18-25;Yemek ve Mutfak;Mavi; 2001-5000 TL;Şehir merkezlerini keşfetmek;Doğal ve rustik;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+12;Kadın;18-25;Seyahat ve Macera;Mavi;1001-2000 TL;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+13;Erkek;26-35;Spor ve Aktiviteler;Mavi; 2001-5000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Lüks ve gösterişli;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+14;Kadın;18-25;Ev Dekorasyonu; Siyah; 501-1000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+15;Erkek;18-25;Kitaplar ve Edebiyat; Siyah;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Aydınlatılmış şehir manzarası
+16;Kadın;26-35;Kitaplar ve Edebiyat; Yeşil;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Bohem ve etnik;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+17;Erkek;46-55;Spor ve Aktiviteler; Siyah;5001 TL ;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Aydınlatılmış şehir manzarası
+18;Kadın;18-25;Kitaplar ve Edebiyat;Mavi;5001 TL ;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Bohem ve özgür ruhlu giyim tarzı;Loş ve romantik mum ışığı
+19;Kadın;18-25; Moda ve Giyim; Yeşil;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist; Vintage ve retro giyim tarzı;Doğal güneş ışığı
+20;Kadın;18-25;Spor ve Aktiviteler;Kırmızı; 2001-5000 TL;Plaj tatilleri;Doğal ve rustik;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+21;Kadın;18-25;Moda ve Giyim; Siyah;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Sanatsal ve yaratıcı;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+22;Kadın;18-25;Ev Dekorasyonu;Mor;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Doğal ve rustik;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+23;Erkek;18-25;Teknoloji ve Cihazlar;Mavi; 2001-5000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Lüks ve gösterişli;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+24;Kadın;26-35;Kitaplar ve Edebiyat; Siyah;5001 TL ;Şehir dışı ve uzun yolculuklar;Doğal ve rustik;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+25;Erkek;18-25;Müzik ve Konserler; Siyah;5001 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+26;Kadın;46-55;Spor ve Aktiviteler; Siyah;5001 TL ;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Doğal ve rustik;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+27;Kadın;18-25;Moda ve Giyim;Mor; 501-1000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+28;Kadın;26-35;Müzik ve Konserler; Siyah; 501-1000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Doğal ve rustik;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+29;Kadın;18-25;Kitaplar ve Edebiyat; Siyah; 2001-5000 TL;Şehir merkezlerini keşfetmek;Sanatsal ve yaratıcı;Hipster ve alternatif giyim tarzı;Doğal güneş ışığı
+30;Kadın;46-55; Moda ve Giyim;Mor; 501-1000 TL;Plaj tatilleri;Bohem ve etnik;Bohem ve özgür ruhlu giyim tarzı;Doğal güneş ışığı
+31;Erkek;18-25;Kitaplar ve Edebiyat;Kırmızı; 2001-5000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+32;Erkek;36-45;Kitaplar ve Edebiyat;Mavi;5001 TL ;Plaj tatilleri;Lüks ve gösterişli; Vintage ve retro giyim tarzı;Doğal güneş ışığı
+33;Erkek;46-55; Teknoloji ve Cihazlar; Siyah; 2001-5000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Doğal ve rustik;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+34;Kadın;26-35;Spor ve Aktiviteler;Kırmızı;5001 TL ;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Renkli ve eğlenceli parti ışıkları
+35;Kadın;18-25;Seyahat ve Macera;Kırmızı; 2001-5000 TL;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+36;Kadın;18-25;Sanat ve El Sanatları;Mavi;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Lüks ve gösterişli;Hipster ve alternatif giyim tarzı;Loş ve romantik mum ışığı
+37;Erkek;18-25;Spor ve Aktiviteler;Gri; 501-1000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Aydınlatılmış şehir manzarası
+38;Erkek;18-25;Spor ve Aktiviteler; Siyah;1001-2000 TL;Plaj tatilleri;Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+39;Erkek;18-25;Spor ve Aktiviteler; Yeşil; 501-1000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Vintage ve antika; Vintage ve retro giyim tarzı;Loş ve romantik mum ışığı
+40;Erkek;18-25;Seyahat ve Macera; Siyah; 501-1000 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Renkli ve eğlenceli parti ışıkları
+41;Erkek;18-25;Ev Dekorasyonu; Siyah; 2001-5000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+42;Kadın;18-25;Seyahat ve Macera;Mor; 2001-5000 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+43;Erkek;18-25;Spor ve Aktiviteler; Yeşil;1001-2000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+44;Kadın;18-25;Sanat ve El Sanatları;Mor;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Sanatsal ve yaratıcı;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+45;Erkek;18-25;Spor ve Aktiviteler; Siyah; 0-500 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+46;Erkek;36-45;Kitaplar ve Edebiyat;Mavi;5001 TL ;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+47;Erkek;18-25; Teknoloji ve Cihazlar; Yeşil;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Vintage ve antika;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+48;Erkek;18-25; Moda ve Giyim; Beyaz; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Vintage ve antika;Bohem ve özgür ruhlu giyim tarzı;Loş ve romantik mum ışığı
+49;Kadın;18-25;Müzik ve Konserler; Siyah;1001-2000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+50;Erkek;18-25; Teknoloji ve Cihazlar; Siyah; 501-1000 TL;Şehir merkezlerini keşfetmek;Vintage ve antika;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+51;Erkek;18-25;Spor ve Aktiviteler; Yeşil;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+52;Erkek;18-25; Teknoloji ve Cihazlar;Mavi; 501-1000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+53;Erkek;18-25;Kitaplar ve Edebiyat; Yeşil;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+54;Kadın;26-35;Seyahat ve Macera; Siyah; 2001-5000 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+55;Erkek;18-25;Yemek ve Mutfak; Siyah;1001-2000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+56;Erkek;18-25;Müzik ve Konserler; Yeşil;1001-2000 TL;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+57;Erkek;18-25;Spor ve Aktiviteler; Siyah; 2001-5000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+58;Kadın;18-25;Müzik ve Konserler;Gri;1001-2000 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+59;Erkek;26-35;Spor ve Aktiviteler;Mavi; 2001-5000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Lüks ve gösterişli;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+60;Erkek;18-25;Yemek ve Mutfak; Siyah;1001-2000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Doğal ve rustik;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+61;Erkek;18-25; Teknoloji ve Cihazlar;Mavi; 501-1000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+62;Erkek;18-25;Spor ve Aktiviteler;Kırmızı; 0-500 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Lüks ve gösterişli;Hipster ve alternatif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+63;Erkek;18-25; Teknoloji ve Cihazlar; Siyah;1001-2000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+64;Kadın;18-25;Moda ve Giyim; Siyah;1001-2000 TL;Şehir merkezlerini keşfetmek;Vintage ve antika;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+65;Kadın;18-25; Moda ve Giyim; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Lüks ve gösterişli; Vintage ve retro giyim tarzı;Loş ve romantik mum ışığı
+66;Erkek;18-25; Teknoloji ve Cihazlar; Yeşil;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+67;Erkek;18-25;Yemek ve Mutfak;Mavi; 2001-5000 TL;Plaj tatilleri;Modern ve minimalist;Hipster ve alternatif giyim tarzı;Loş ve romantik mum ışığı
+68;Kadın;18-25;Müzik ve Konserler; Siyah;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+69;Erkek;18-25;Yemek ve Mutfak;Mavi; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+70;Kadın;18-25;Yemek ve Mutfak;Mor;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Parlak ve enerjik floresan ışık
+71;Erkek;26-35;Müzik ve Konserler; Yeşil;5001 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+72;Kadın;18-25; Teknoloji ve Cihazlar; Siyah;1001-2000 TL;Plaj tatilleri;Doğal ve rustik;Klasik ve zarif giyim tarzı;Aydınlatılmış şehir manzarası
+73;Kadın;18-25;Seyahat ve Macera; Siyah;1001-2000 TL;Plaj tatilleri;Vintage ve antika;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+74;Erkek;18-25;Spor ve Aktiviteler;Mavi;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Bohem ve etnik;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+75;Kadın;18-25;Spor ve Aktiviteler;Mavi; 2001-5000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Doğal ve rustik;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+76;Erkek;36-45; Teknoloji ve Cihazlar; Siyah;5001 TL ;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+77;Kadın;18-25; Teknoloji ve Cihazlar; Yeşil; 2001-5000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+78;Erkek;18-25;Sanat ve El Sanatları; Yeşil;5001 TL ;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+79;Kadın;18-25;Sanat ve El Sanatları;Gri; 2001-5000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Doğal ve rustik;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+80;Erkek;18-25;Spor ve Aktiviteler;Mavi; 2001-5000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+81;Kadın;26-35;Seyahat ve Macera; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+82;Erkek;18-25;Moda ve Giyim; Siyah;5001 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+83;Kadın;18-25;Teknoloji ve Cihazlar; Yeşil; 2001-5000 TL;Plaj tatilleri;Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Parlak ve enerjik floresan ışık
+84;Erkek;18-25;Spor ve Aktiviteler; Siyah; 2001-5000 TL;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+85;Erkek;18-25;Müzik ve Konserler; Siyah; 2001-5000 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+86;Erkek;18-25;Spor ve Aktiviteler; Siyah; 501-1000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Doğal ve rustik;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+87;Kadın;18-25; Teknoloji ve Cihazlar;Mor; 2001-5000 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+88;Erkek;18-25;Yemek ve Mutfak; Siyah; 2001-5000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+89;Kadın;18-25;Ev Dekorasyonu;Mavi; 2001-5000 TL;Şehir merkezlerini keşfetmek;Bohem ve etnik;Rahat ve spor giyim tarzı;Parlak ve enerjik floresan ışık
+90;Erkek;18-25;Müzik ve Konserler; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+91;Erkek;18-25; Teknoloji ve Cihazlar; Yeşil; 0-500 TL;Şehir dışı ve uzun yolculuklar;Lüks ve gösterişli;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+92;Erkek;18-25; Teknoloji ve Cihazlar;Mavi; 501-1000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Doğal ve rustik;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+93;Kadın;18-25;Yemek ve Mutfak; Yeşil;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Vintage ve antika;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+94;Kadın;18-25; Teknoloji ve Cihazlar; Siyah; 501-1000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+95;Kadın;18-25;Kitaplar ve Edebiyat; Yeşil;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+96;Erkek;26-35;Kitaplar ve Edebiyat; Siyah;5001 TL;Şehir merkezlerini keşfetmek;Lüks ve gösterişli;Bohem ve özgür ruhlu giyim tarzı;Loş ve romantik mum ışığı
+97;Erkek;18-25;Spor ve Aktiviteler; Siyah; 501-1000 TL;Plaj tatilleri;Sanatsal ve yaratıcı;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+98;Kadın;18-25;Yemek ve Mutfak;Mavi;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+99;Erkek;18-25;Kitaplar ve Edebiyat; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Vintage ve antika; Vintage ve retro giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+100;Kadın;18-25;Müzik ve Konserler; Siyah; 501-1000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+101;Kadın;18-25;Moda ve Giyim; Siyah;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Vintage ve antika; Vintage ve retro giyim tarzı;Loş ve romantik mum ışığı
+102;Erkek;18-25;Seyahat ve Macera;Mavi;5001 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+103;Erkek;18-25; Teknoloji ve Cihazlar;Mavi;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Doğal ve rustik;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+104;Erkek;18-25;Spor ve Aktiviteler;Mavi; 0-500 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+105;Erkek;18-25;Yemek ve Mutfak;Mavi; 501-1000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Bohem ve özgür ruhlu giyim tarzı;Doğal güneş ışığı
+106;Erkek;18-25;Müzik ve Konserler; Beyaz;1001-2000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+107;Erkek;18-25; Teknoloji ve Cihazlar; Siyah; 501-1000 TL;Şehir merkezlerini keşfetmek;Vintage ve antika;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+108;Erkek;18-25; Teknoloji ve Cihazlar; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Vintage ve antika; Vintage ve retro giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+109;Erkek;18-25;Müzik ve Konserler; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Bohem ve etnik;Bohem ve özgür ruhlu giyim tarzı;Loş ve romantik mum ışığı
+110;Erkek;26-35; Teknoloji ve Cihazlar;Kırmızı;5001 TL ;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+111;Erkek;18-25;Spor ve Aktiviteler;Mor; 501-1000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Bohem ve özgür ruhlu giyim tarzı;Aydınlatılmış şehir manzarası
+112;Erkek;18-25;Spor ve Aktiviteler;Sarı; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+113;Erkek;18-25; Teknoloji ve Cihazlar;Mavi; 2001-5000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+114;Kadın;18-25;Ev Dekorasyonu;Mor; 2001-5000 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+115;Kadın;18-25;Seyahat ve Macera; Yeşil;1001-2000 TL;Plaj tatilleri;Bohem ve etnik; Vintage ve retro giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+116;Erkek;18-25;Müzik ve Konserler; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Lüks ve gösterişli;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+117;Erkek;26-35;Seyahat ve Macera; Siyah;5001 TL ;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+118;Kadın;18-25; Moda ve Giyim; Beyaz;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+119;Erkek;18-25;Sanat ve El Sanatları; Siyah; 0-500 TL;Plaj tatilleri;Doğal ve rustik;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+120;Erkek;18-25; Teknoloji ve Cihazlar; Siyah;5001 TL ;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+121;Erkek;18-25; Teknoloji ve Cihazlar; Pembe; 501-1000 TL;Şehir dışı ve uzun yolculuklar;Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Renkli ve eğlenceli parti ışıkları
+122;Erkek;18-25;Yemek ve Mutfak;Mavi; 501-1000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+123;Kadın;26-35;Spor ve Aktiviteler; Yeşil;5001 TL ;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Vintage ve antika; Vintage ve retro giyim tarzı;Loş ve romantik mum ışığı
+124;Erkek;18-25;Seyahat ve Macera;Mavi;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+125;Kadın;18-25;Yemek ve Mutfak;Mavi; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Bohem ve etnik;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+126;Erkek;26-35; Teknoloji ve Cihazlar; Siyah;5001 TL ;Şehir dışı ve uzun yolculuklar;Doğal ve rustik;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+127;Erkek;18-25;Yemek ve Mutfak;Kırmızı; 501-1000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Doğal ve rustik;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+128;Kadın;18-25;Sanat ve El Sanatları; Yeşil;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Vintage ve antika; Vintage ve retro giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+129;Erkek;18-25; Moda ve Giyim; Siyah;5001 TL ;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Aydınlatılmış şehir manzarası
+130;Erkek;26-35;Seyahat ve Macera;Mor; 2001-5000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+131;Erkek;46-55;Kitaplar ve Edebiyat;Sarı;5001 TL ;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+132;Erkek;18-25;Yemek ve Mutfak; Siyah; 501-1000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist; Vintage ve retro giyim tarzı;Doğal güneş ışığı
+133;Erkek;18-25; Teknoloji ve Cihazlar;Mavi; 501-1000 TL;Şehir merkezlerini keşfetmek;Lüks ve gösterişli;Klasik ve zarif giyim tarzı;Parlak ve enerjik floresan ışık
+134;Erkek;18-25;Seyahat ve Macera; Yeşil; 501-1000 TL;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+135;Erkek;18-25; Seyahat ve Macera; Siyah;1001-2000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+136;Erkek;46-55;Yemek ve Mutfak; Beyaz;5001 TL ;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+137;Kadın;18-25;Yemek ve Mutfak;Gri;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+138;Erkek;18-25; Teknoloji ve Cihazlar; Siyah;1001-2000 TL;Plaj tatilleri;Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+139;Kadın;18-25;Sanat ve El Sanatları;Mor;1001-2000 TL;Şehir merkezlerini keşfetmek;Sanatsal ve yaratıcı;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+140;Erkek;18-25;Seyahat ve Macera; Siyah; 2001-5000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+141;Erkek;18-25;Ev Dekorasyonu;Mavi; 2001-5000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist; Vintage ve retro giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+142;Erkek;18-25;Yemek ve Mutfak;Mavi; 2001-5000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Doğal ve rustik;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+143;Erkek;18-25;Yemek ve Mutfak;Mavi;1001-2000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Doğal ve rustik;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+144;Erkek;26-35;Kitaplar ve Edebiyat; Siyah;5001 TL;Plaj tatilleri;Vintage ve antika;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+145;Erkek;18-25; Teknoloji ve Cihazlar; Siyah; 0-500 TL;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+146;Erkek;18-25;Sanat ve El Sanatları;Kırmızı; 501-1000 TL;Plaj tatilleri;Vintage ve antika;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+147;Erkek;18-25;Spor ve Aktiviteler;Mavi; 501-1000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+148;Erkek;26-35;Kitaplar ve Edebiyat;Mavi; 2001-5000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Doğal ve rustik;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+149;Erkek;18-25; Teknoloji ve Cihazlar;Mavi;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+150;Erkek;18-25; Teknoloji ve Cihazlar;Mor; 2001-5000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+151;Erkek;18-25; Teknoloji ve Cihazlar;Kırmızı; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+152;Erkek;46-55; Teknoloji ve Cihazlar;Mavi;5001 TL ;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Renkli ve eğlenceli parti ışıkları
+153;Kadın;26-35; Teknoloji ve Cihazlar; Pembe;5001 TL ;Şehir dışı ve uzun yolculuklar;Lüks ve gösterişli;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+154;Erkek;18-25;Kitaplar ve Edebiyat;Mavi; 501-1000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+155;Kadın;18-25;Sanat ve El Sanatları; Siyah; 501-1000 TL;Şehir merkezlerini keşfetmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+156;Erkek;46-55;Spor ve Aktiviteler; Siyah;5001 TL ;Şehir merkezlerini keşfetmek;Modern ve minimalist;Klasik ve zarif giyim tarzı;Doğal güneş ışığı
+157;Erkek;18-25;Spor ve Aktiviteler;Mavi;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Doğal ve rustik;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+158;Erkek;26-35; Teknoloji ve Cihazlar;Gri; 501-1000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+159;Kadın;26-35;Teknoloji ve Cihazlar; Siyah;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+160;Erkek;18-25;Spor ve Aktiviteler; Siyah; 501-1000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+161;Kadın;18-25; Moda ve Giyim; Siyah;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+162;Kadın;18-25; Seyahat ve Macera;Mavi;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Vintage ve antika;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+163;Erkek;46-55;Seyahat ve Macera; Siyah;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+164;Erkek;18-25; Teknoloji ve Cihazlar; Siyah; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+165;Kadın;18-25;Kitaplar ve Edebiyat; Siyah;1001-2000 TL;Kültürel ve tarihi mekanları ziyaret etmek;Vintage ve antika; Vintage ve retro giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+166;Erkek;18-25; Teknoloji ve Cihazlar;Gri;5001 TL ;Şehir dışı ve uzun yolculuklar;Modern ve minimalist;Rahat ve spor giyim tarzı;Parlak ve enerjik floresan ışık
+167;Erkek;46-55;Müzik ve Konserler; Beyaz;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Modern ve minimalist;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+168;Erkek;18-25;Spor ve Aktiviteler;Siyah;1001-2000 TL;Plaj tatilleri;Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+169;Erkek;18-25;Spor ve Aktiviteler; Siyah;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Sanatsal ve yaratıcı;Klasik ve zarif giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
+170;Erkek;18-25;Müzik ve Konserler;Mavi;1001-2000 TL;Şehir dışı ve uzun yolculuklar;Sanatsal ve yaratıcı;Klasik ve zarif giyim tarzı;Loş ve romantik mum ışığı
+171;Erkek;18-25;Spor ve Aktiviteler;Kırmızı; 2001-5000 TL;Plaj tatilleri;Bohem ve etnik;Klasik ve zarif giyim tarzı;Aydınlatılmış şehir manzarası
+172;Erkek;46-55; Teknoloji ve Cihazlar; Siyah;5001 TL;Plaj tatilleri;Modern ve minimalist;Klasik ve zarif giyim tarzı;Aydınlatılmış şehir manzarası
+173;Kadın;18-25;Seyahat ve Macera;Mavi; 2001-5000 TL;Şehir dışı ve uzun yolculuklar;Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+174;Kadın;18-25;Seyehat ve Macera;Mavi;1001-2000 TL;Plaj tatilleri;Sanatsal ve yaratıcı;Rahat ve spor giyim tarzı;Loş ve romantik mum ışığı
+175;Erkek;26-35;Spor ve Aktiviteler;Mavi;2001-5000 TL;Aktif ve macera dolu tatiller (rafting, sörf, dağ tırmanışı);Modern ve minimalist;Rahat ve spor giyim tarzı;Doğal güneş ışığı
+176;Kadın;36-45;Kitaplar ve Edebiyat;Yeşil;1001-2000 TL;Doğa tatilleri (dağ evi, kamp, doğa yürüyüşleri);Doğal ve rustik;Rahat ve spor giyim tarzı;Yumuşak ve rahatlatıcı LED ışık
